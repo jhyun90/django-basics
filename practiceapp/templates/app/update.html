@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <form action="{% url 'restaurant-update' %}" method="post">
+        {% csrf_token %}
+        <!--
+        사용자가 어떤 식당의 정보를 변경하고자 하는가를 파악하기 위한 방법으로 'id'를 입력 받고,
+        해당 'id'를 가진 식당의 정보를 변경할 수 있도록 입력값을 제공-->
+        <input type="hidden" name="id" value="{{ form.instance.id }}"/>
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">수정 완료</button>
+    </form>
+</div>
+{% endblock %}

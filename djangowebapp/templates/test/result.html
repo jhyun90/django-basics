@@ -1,0 +1,27 @@
+{% extends 'test/base.html' %}
+{% load static %}
+{% block content %}
+<h3>추첨 번호입니다.</h3>
+<div style="text-align:left;">
+<ul>
+    {% for num in num_arr %}
+    <li>{{ num }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <ul>-->
+<!--        {% for num in num_arr %}-->
+<!--        <li>{{ num }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</body>-->
+<!--</html>-->

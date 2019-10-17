@@ -1,0 +1,26 @@
+{% extends 'test/base.html' %}
+{% load static %}
+{% block content %}
+<p>Hello World!</p>
+<img style="width:100px" src="{% static 'test/hello.jpg' %}" alt="Hello"/>
+<p>{{ current_date }}</p>
+<p>{{ current_date|date:'Y년 m월 d일 H시 i분 s초' }}</p>
+<a href="{% url 'select' %}">시작하기</a>
+{% endblock %}
+
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <p>Hello World!</p>-->
+<!--    <img style="width:100px" src="{% static 'test/hello.jpg' %}" alt="Hello"/>-->
+<!--    <p>{{ current_date }}</p>-->
+<!--    <p>{{ current_date|date:'Y년 m월 d일 H시 i분 s초' }}</p>-->
+<!--    <a href="{% url 'select' %}">시작하기</a>-->
+<!--</body>-->
+<!--</html>-->
+
